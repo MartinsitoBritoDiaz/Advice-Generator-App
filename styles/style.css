@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;800&display=swap');
+
+:root{
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --primary-font: 'Manrope', sans-serif;
+}
+
+*, *::before, *::after{ box-sizing: inherit; }
+
+body{
+    background-color: var(--Dark-Blue);
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+main{ height: 90vh; }
+
+h1{
+    color: var(--Neon-Green);
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img{ max-width: 100%; }
+
+a{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modifiers */
+
+.flex{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card__relative{ position: relative; }
+
+/* Elements */
+.card{
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+    max-width: min(80%, 30rem);
+    padding: 1.5rem 2rem;
+}
+
+.advice{
+    color: var(--Light-Cyan);
+    font-size: 28px;
+    text-align: center;
+}
+
+.advice::before{ content: open-quote; }
+.advice::after{ content: close-quote; }
+
+.lines{
+    background-image: url('./../images/pattern-divider-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 4rem;
+    width: auto;
+}
+
+@media (min-width: 375px) {
+     .lines{
+        background-image: url('./../images/pattern-divider-desktop.svg');;
+    }
+}
+
+.button--random{
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    border: none;
+    bottom: -60px;
+    cursor: pointer;
+    height: 24px;
+    padding: 1rem;
+    position: absolute;
+    top: -3px;
+    transition: transform 2s;
+}
+
+.button--random:active,
+.button--random:hover{
+    -moz-box-shadow: 0px 7px 55px 0px rgba(82,255,168,1);
+    -webkit-box-shadow: 0px 7px 55px 0px rgba(82,255,168,1);
+    box-shadow: 0px 7px 55px 0px rgba(82,255,168,1);
+    transform: rotate(90deg);
+}
+
+.button--random:focus {outline:0;}
+
+@media (max-width: 375px) { 
+    .button--random:focus {transform: rotate(180deg);}
+}
+
+/* Footer */
+
+.footer{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer a{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: var(--Light-gray);
+}
+
+.footer a:visited{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
