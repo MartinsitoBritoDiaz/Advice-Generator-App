@@ -100,10 +100,6 @@ a{
 
 .button--random:focus {outline:0;}
 
-@media (max-width: 375px) { 
-    .button--random:focus {transform: rotate(180deg);}
-}
-
 /* Footer */
 
 .footer{
